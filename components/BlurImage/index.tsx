@@ -1,5 +1,4 @@
 import Image from "next/image";
-import styles from "./styles.module.css";
 import { useState } from "react";
 import cn from "clsx";
 
@@ -8,10 +7,6 @@ export default function BlurImage(props) {
   return (
     <Image
       {...props}
-      className={cn(
-        styles["image-transition"],
-        isLoading ? styles["image-loading"] : styles["image-loaded"]
-      )}
       onLoadingComplete={() => setLoading(false)}
     />
   );
